@@ -2,84 +2,93 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Passion+One&display=swap');
 
+/* Variaveis contendo as fontes usadas no projeto*/
 :root {
     --fonte1:Verdana, Geneva, Tahoma, sans-serif;
     --fonte2:'Passion One', cursive; 
     --fonte3:'Cookie', cursive;
 }
+/* Declarações globais que se aplicam para todo o projeto*/
 * {
     margin: 0;
     padding: 0px;
 }
+/* Fonte do projeto para caso as fontes principais não funcionem*/
 html, body {
     font-family: var(--fonte1); 
 }
-
+/*Corpo do projeto -- div principal*/
 body {
     min-height: 100vh;
     background-color: darkgray;
 }
-
+/* Cabeçalho*/
 header {
     background-color: black;
     color: white; 
     text-align: center;
 } 
+/*Configuração do titulo do cabeçalho*/
 header > h1 {
     padding: 50px 0px 0px 0px;
     font-variant:small-caps;
     font-family: var(--fonte2);
     font-size: 10vw;
 }
+/*Configuração do subtitulo da cabeçalho*/
 header > p {
     padding: 0px 0px 50px 0px;
 }
+/* Configuração para os links do cabeçalho e rodapé pois são os mesmos ajustes*/
 header a, footer a {
     color: white;
     text-decoration: none;
     font-weight: bolder;
 }
+/* Configuração ao passar o mouse no link*/
 header a:hover, footer a:hover {
     text-decoration: underline;
 }
+/*Seção principal onde contém a configuração geral de todas as sections.*/
 section {
-    padding: 10vh 0px 10vh 30px;
-    line-height: 2em;
+    padding: 10vh 0px 10vh 30px; /*10% da viewport height*/
+    line-height: 2em; /* espaçamento entre as linhas 2x o tamanho normal*/
     font-family: var(--fonte3);
-    font-size: 5vw;
+    font-size: 5vw; /*5% da viewport height*/
 }
+
 section > p {
     padding: 0px 0px 2em 0px;
 }
+/*Define as caracteristicas das seções que não vão ter foto*/
 section.normal {
     background-color: white ;
 }
+/*Define as caracteristicas da seção que vai ter imagem*/
 section.imagem {
     background-color: rgba(0, 0, 0, 0.675);
     color: white; 
     text-shadow: 1px 1px 0px black;
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.719);
-    background-size: cover;
-    background-attachment: fixed;
-       
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.719);/*Sombra da caixa com uma leve transparencia*/
+    background-size: cover; /*Cobre o fundo com a foto de modo que preenche o espaço completo*/
+    background-attachment: fixed; /*Deixa o fundo pixo enquanto desliza a tela, causando efeito de paralax*/     
 }
+/*Define a configuração para o paragrafo da seção que possui imagem*/
 section.imagem > p {
     background-color: rgba(0, 0, 0, 0.438);
     padding: 0px 20px 0px 10px;
-    display: inline-block;
+    display: inline-block; /*Define que o box vai acompanhar o tamanho do elemento, se adaptando*/
 }
+/*Imagens das seções que possuem imagem*/
 section#img01 {
     background-image: url(../imagens/background001.jpg);
-    background-position: right center;
+    background-position: right center;/*Define em qual posição da imagem vai focar*/
     
 }
 section#img02 {
     background-image: url(../imagens/background002.jpg);
 }
-
-
-
-
+/*Rodapé*/
 footer {
     background-color: black;
     color: white;
