@@ -1,3 +1,3 @@
 # html-css
- Curso de HTML5 e CSS3 do CursoEmVideo
- Estou aprendendo a criar sites <3
+ Exercicios de HTML5 e CSS3 
+ Aprendendo a criar sites <3
